@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <style>
+            .section > pre {
+                font: bold 8px/5px monospace;
+                color: #000;
+            }
+
+            .section * {
+                display: inline-block;
+                font-style: normal;
+            }
+        </style>
+    </head>
+    <body style="">
+        <div class="section">
+            <img width="300" id="image" src="test.jpg" />
+            <pre id="ascii"></pre>
+        </div>
+    </body>
+    <script src="dist/asciiFilter.min.js"></script>
+    <script>
+        new asciiFilter({
+            element: document.getElementById('image'),
+            container: document.getElementById('ascii'),
+            width: 63,
+            color: false
+        })
+    </script>
+</html>
